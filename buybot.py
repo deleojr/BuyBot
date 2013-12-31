@@ -22,6 +22,7 @@ while(loopcount < 100000):
 	print '\n\n\n\n\n\n\n\n\n'
 	btcf = float(cex.balance()['BTC']['available'])
 	buyp = float(cex.ticker('GHS/BTC')['last'])
+	print 'BTC Balance %6.6F' % btcf
 	if(btcf > 0.00001):
 		buyamount = btcf/buyp	
 		print cex.place_order('buy',buyamount,buyp,'GHS/BTC')
